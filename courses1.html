@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comaptible" content="IE=edge">
+  <title>STAR-CLASSES</title>
+  <link rel="shortcut icon" href="./img/ICONE.jfif" type="image/x-icon">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+  <meta name="desciption" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./bootstrap-5.0.2-dist/assets/css/bootstrap.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+<style>
+  .text {
+    position: relative;
+    top: 450px;
+    box-shadow: 0 5px 40px #dc5a1d;
+    background: -webkit-linear-gradient(right, #56d8e4,  #101c34, #56d8e4,  #101c34);
+    width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    width: 95%;
+  }
+
+  .slider-wrapper {
+    position: relative;
+  }
+
+  .slider-wrapper .slide-button {
+    position: absolute;
+    top: 50%;
+    outline: none;
+    border: none;
+    height: 50px;
+    width: 50px;
+    z-index: 5;
+    color: #fff;
+    display: flex;
+    cursor: pointer;
+    font-size: 2.2rem;
+    background: #000;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transform: translateY(-50%);
+  }
+
+  .slider-wrapper .slide-button:hover {
+    background: #404040;
+  }
+
+  .slider-wrapper .slide-button#prev-slide {
+    left: -25px;
+    display: none;
+  }
+
+  .slider-wrapper .slide-button#next-slide {
+    right: -25px;
+  }
+
+  .slider-wrapper .image-list {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 18px;
+    font-size: 0;
+    list-style: none;
+    margin-bottom: 30px;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .slider-wrapper .image-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .slider-wrapper .image-list .image-item {
+    width: 325px;
+    height: 300px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .container .slider-scrollbar {
+    height: 24px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  .slider-scrollbar .scrollbar-track {
+    background: #ccc;
+    width: 100%;
+    height: 2px;
+    display: flex;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+  }
+
+  .slider-scrollbar:hover .scrollbar-track {
+    height: 4px;
+  }
+
+  .slider-scrollbar .scrollbar-thumb {
+    position: absolute;
+    background: #000;
+    top: 0;
+    bottom: 0;
+    width: 50%;
+    height: 100%;
+    cursor: grab;
+    border-radius: inherit;
+  }
+
+  .slider-scrollbar .scrollbar-thumb:active {
+    cursor: grabbing;
+    height: 8px;
+    top: -2px;
+  }
+
+  .slider-scrollbar .scrollbar-thumb::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -10px;
+    bottom: -10px;
+  }
+
+  /* Styles for mobile and tablets */
+  @media only screen and (max-width: 1023px) {
+    .slider-wrapper .slide-button {
+      display: none !important;
+    }
+
+    .slider-wrapper .image-list {
+      gap: 10px;
+      margin-bottom: 15px;
+      scroll-snap-type: x mandatory;
+    }
+
+    .slider-wrapper .image-list .image-item {
+      width: 280px;
+      height: 380px;
+    }
+
+    .slider-scrollbar .scrollbar-thumb {
+      width: 20%;
+    }
+  }
+
+  .card-text-1 {
+    background-color: #dc5a1d;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 50px;
+  }
+
+  /* .more{
+  background-color: #dc5a1d;
+  /* width: 40px;
+  height: 40px; */
+  /* border-radius: 40px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+} */
+  */
+  /* .img-fluid {
+        width: 100%;
+        height: 100%;
+    } */
+
+  .card-title {
+    font-weight: bolder;
+    font-size: 40px;
+  }
+</style>
+
+<body>
+  <!-- navbar -->
+  <nav>
+    <div class="nav-bar">
+       <i class='bx bx-menu sidebarOpen'></i>
+       <span class="logo navLogo"><a href="index.html"><i class="fa-solid fa-star" style="color: #fc5406;"></i> S-CLASSES</a></span>
+       <div class="menu">
+          <div class="logo-toggle">
+             <span class="logo"><a href="#">S-CLASSES</a></span>
+             <i class='bx bx-x siderbarClose'></i>
+          </div>
+          <ul class="nav-links mb-0">
+             <li><a href="./index.html">Home</a></li>
+             <li><a href="./about.html">About</a></li>
+             <li><a href="./courses1.html">Courses</a></li>
+             <li><a href="./fee.html">Fee Structure</a></li>
+             <li><a href="./contactus.html">Contact US</a></li>
+          </ul>
+       </div>
+       <div class="darkLight-searchBox">
+          <div class="dark-light">
+             <!-- <i class='bx bx-moon moon'></i>
+             <i class='bx bx-sun sun'></i> -->
+          </div>
+          <div class="searchBox">
+             <div class="searchToggle">
+                <i class='bx bx-x cancel'></i>
+                <i class='bx bx-search search'></i>
+             </div>
+             <div class="search-field">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+             </div>
+          </div>
+       </div>
+    </div>
+ </nav>
+  <!--video -->
+  
+  <section id="video1" class="video3 video4">
+    <video autoplay loop muted>
+    <source src="./img/co.mp4" poster="./img/co.mp4">
+  </video>
+    <div class="courseTitle">
+        <div class="title-1"></div>
+        <p class="title-2"></p>
+    </div>
+</section>
+
+  <!-- -->
+  <!-- breadcrumb start -->
+  <div style="background-color: #dc5a1d;margin-top: 50px; height: 60px; width: 90%; border-radius: 10px;position: relative;top:40px;"
+    class="container-fluid p-0">
+    <brud style="padding: 15px 0px 15px 25px !important;position: relative;bottom:5px;" aria-label="breadcrumb">
+      <ol class="breadcrumb bt-0" style="padding-left:30px;">
+        <li class="breadcrumb-item"><a href="./index.html"
+            style="font-weight: bolder; color: white;text-decoration: none;">Home</a></li>
+        <li class="breadcrumb-item" style="font-weight: bolder; color: white;">Courses</li>
+      </ol>
+    </brud>
+  </div>
+  <!-- breadcrumb end -->
+  <!-- content -->
+  <div class="container">
+
+    <h1 class="heading1" style="font-size:50px;font-weight: bolder;">IT Courses</h1>
+
+    <div class="container-fluid p-0">
+
+      <!-- first card start -->
+
+      <div id="course-1" class="row justify-content-center">
+
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 justify-content-center mt-5">
+
+          <h3>ADSE</h3>
+          <h3>Advance Diploma in Software Engineering</h3>
+          <p class="mt-4">ACCP PRIME is designed to produce developers of the future. Enabling students to
+            develop applications from start to finish on many different platforms.</p>
+
+        </div>
+
+        <div
+          class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 d-flex mr-5 flex-column justify-content-center style=">
+
+          <div id="main-1" class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <img src="./img/card1.png" alt="Trendy Pants and Shoes" class="img-fluid rounded-start" />
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title">ADSE</h5>
+                  <p class="card-text">
+                    Aptech Certified Computer Professional is the best career path for anyone looking to make a career
+                    in the I.T. industry. A one of a kind curriculum in Pakistan
+
+
+                  </p>
+                  <center>
+                    <p class="card-text-1">
+                      <a class="more" href="./accp.html"><small class="mare" title="More interest"><i
+                            class="fa-solid fa-arrow-right"
+                            style="font-size: 25px;padding:11px;color: #f4f4f4;"></i></small></a>
+                    </p>
+                  </center>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- first card end -->
+
+      <!-- second card start -->
+
+      <div id="course-2" class="row justify-content-center">
+
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 justify-content-center mt-5">
+
+          <h3>HDSE</h3>
+          <h3>Higher Diploma in Software Engineering</h3>
+          <p class="mt-3">Star Classes HDSE program helps students learn full stack development in multiple
+            fields including Web Designing, Application development & Mobile App development.</p>
+
+        </div>
+
+        <div
+          class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 d-flex mr-5 flex-column justify-content-center style=">
+
+          <div id="main-1" class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <img src="./img/card2.png" alt="Trendy Pants and Shoes" class="img-fluid rounded-start" />
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title">HDSE</h5>
+                  <p class="card-text mt-3">
+                    Star Classes Certified Computer Professional is the best career path for anyone looking to make a
+                    career in the I.T. industry. A one of a kind curriculum in Pakistan
+
+
+                  </p>
+                  <center>
+                    <p class="card-text-1">
+                      <a class="more" href="./hdse.html"><small class="mare" title="More interest"><i
+                            class="fa-solid fa-arrow-right"
+                            style="font-size: 25px;padding:11px;color: #f4f4f4;"></i></small></a>
+                    </p>
+                  </center>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <!-- Second card end -->
+
+      <!-- third card start -->
+
+      <div id="course-3" class="row justify-content-center">
+
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-12 justify-content-center mt-5">
+
+          <h3>Smart Professionals</h3>
+          <p class="mt-4">Smart Professional course is a comprehensive <br> program designed to equip
+            individuals with the essential skills and knowledge needed to excel in today's competitive
+            professional landscape.</p>
+
+        </div>
+
+        <div
+          class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 d-flex mr-5 flex-column justify-content-center style=">
+
+          <div id="main-1" class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <img src="./img/card3.png" alt="Trendy Pants and Shoes" class="img-fluid rounded-start" />
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title">Smart Professionals</h5>
+                  <p class="card-text">
+                    Smart Professional course is a comprehensive program designed to equip individuals with the
+                    essential skills and knowledge needed to excel in today's competitive professional landscape.
+
+                  </p>
+                  <center>
+                    <p class="card-text-1">
+                      <a class="more" href="./smart.html"><small class="mare" title="More interest"><i
+                            class="fa-solid fa-arrow-right"
+                            style="font-size: 25px;padding:11px;color: #f4f4f4;"></i></small></a>
+
+                    </p>
+                  </center>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+
+      <!-- third card end -->
+
+      <!-- fourth card start -->
+
+      <div id="course-4" class="row ">
+
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 justify-content-center mt-5">
+
+          <h3>Short Course</h3>
+          <p class="mt-4">Discover the power of effective communication in our dynamic short course. Enhance your verbal
+            and written skills through interactive exercises, practical examples, and personalized feedback.</p>
+
+        </div>
+
+        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 d-flex justify-content-center">
+
+          <div id="main-1" class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <img src="./img/card4.png" alt="Trendy Pants and Shoes" class="img-fluid rounded-start" />
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title">Short Course</h5>
+                  <p class="card-text mt-3">
+
+                    Discover the power of effective communication in our dynamic short course.
+                  </p>
+                  <center>
+                    <p class="card-text-1">
+                      <a class="more" href="./short.html"><small class="mare" title="More interest"><i
+                            class="fa-solid fa-arrow-right"
+                            style="font-size: 25px;padding:11px;color: #f4f4f4;"></i></small></a>
+
+                    </p>
+                  </center>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- fourth card end -->
+
+
+      <!-- five card start -->
+
+      <div id="course-5" class="row ">
+
+        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-sm-4 justify-content-center mt-5">
+
+          <h3>Languge</h3>
+          <p class="mt-4">Discover the art of effective communication with our dynamic English language course. From
+            mastering grammar rules to expanding vocabulary, this immersive program equips you with essential language
+            skills. Engage in interactive sessions, role plays, and practical exercises to enhance fluency and
+            confidence.</p>
+
+        </div>
+
+        <div class="col-xxl-8 col-xl-8 col-lg-8 col-md-12 col-sm-12 d-flex justify-content-center">
+
+          <div id="main-1" class="card mb-3">
+            <div class="row g-0">
+              <div class="col-md-6">
+                <img style="height: 220px;" src="./img/card5.png" alt="Trendy Pants and Shoes"
+                  class="img-fluid rounded-start" />
+              </div>
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title">Languge</h5>
+                  <p class="card-text mt-3">
+                    Discover the art of effective communication with our dynamic English language course.
+
+                  </p>
+                  <center>
+                    <p class="card-text-1">
+
+                      <a class="more" href="./Languages.html"><small class="mare" title="More interest"><i
+                            class="fa-solid fa-arrow-right"
+                            style="font-size: 25px;padding:11px;color: #f4f4f4;"></i></small></a>
+
+                    </p>
+                  </center>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- five card end -->
+      <center>
+        <div class="heading2">
+          <h1 style="font-size:50px;font-weight: bolder;">Other Short Courses
+          </h1>
+        </div>
+
+        <div class="text">
+          <div class="slider-wrapper">
+            <button id="prev-slide" class="slide-button material-symbols-rounded">
+              chevron_left
+            </button>
+            <ul class="image-list">
+              <img class="image-item" src="./img/python-1.avif" alt="img-1" />
+              <img class="image-item" src="./img/Design-1.jpg" alt="img-2" />
+              <img class="image-item" src="./img/html-1.png" alt="img-3" />
+              <img class="image-item" src="./img/Website Development-1.png" alt="img-4" />
+              <img class="image-item" src="./img/react.png" alt="img-5" />
+              <img class="image-item" src="./img/Angular-1.jpg" alt="img-6" />
+            </ul>
+            <button id="next-slide" class="slide-button material-symbols-rounded">
+              chevron_right
+            </button>
+          </div>
+          <div class="slider-scrollbar">
+            <div class="scrollbar-track">
+              <div class="scrollbar-thumb"></div>
+            </div>
+          </div>
+        </div>
+      </center>
+    </div>
+  </div>
+
+
+  <footer class="mt-5" style="position: relative;top:500px;">
+    <div class="content ">
+       <div class="top">
+          <div class="logo-details">
+             <i class="fa-solid fa-star" style="color: #fc5406;"></i>
+             <span class="logo_name">STAR CLASSES</span>
+          </div>
+          <div class="media-icons">
+             <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+             <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+             <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+             <a href="https://pk.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+             <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+          </div>
+       </div>
+       <div class="link-boxes">
+          <ul class="box">
+             <li class="link_name">S-CLASSES</li>
+             <li><a href="./index.html">Home</a></li>
+             <li><a href="./contactus.html">Contact us</a></li>
+             <li><a href="./about.html">About us</a></li>
+          </ul>
+          <ul class="box">
+             <li class="link_name">COURSE OFFER</li>
+             <li><a href="./about.html">ABOUT Star Classes</a></li>
+             <li><a href="./fee.html">Fee Structure</a></li>
+             <li><a href="./hdse.html">HDSE</a></li>
+             <li><a href="./accp.html">ADSE</a></li>
+             <li><a href="./short.html">Short Courses</a></li>
+             <li><a href="./smart.html">Smart Professionals</a></li>
+             <li><a href="./Languages.html">Language</a></li>
+          </ul>
+          <ul class="box">
+             <li class="link_name">Account</li>
+             <li><a href="./login.html">Login</a></li>
+             <li><a href="./login.html">Signup</a></li>
+          </ul>
+          <ul class="box">
+             <li class="link_name">Contact Us</li>
+             <li class="fas fa-home me-3" style="color:#f4f4f4;"> <a href="https://goo.gl/maps/LAF81cDo5UCWJ5HM8">
+                   Aptech
+                   D.H.A Center</a></li>
+             <li class="fas fa-envelope me-3" style="color:#f4f4f4;"><a href="mailto:"> Send Email</a></li>
+             <li class="fas fa-phone me-3" style="color:#f4f4f4;"><a
+                   href="https://wa.me/+923212406190?text=please resolve my queery,i want to ask something."> Whatsapp
+                   Me</a></li>
+          </ul>
+          <ul class="box input-box">
+             <li class="link_name">Subscribe</li>
+             <li><input style="background-color: #f4f4f4;color:  #101c34;" type="text" placeholder="Enter your email">
+             </li>
+             <li><input type="button" value="Subscribe"></li>
+          </ul>
+       </div>
+    </div>
+    <div class="bottom-details">
+       <div class="bottom_text">
+          <span class="copyright_text">Copyright © 2023 <a href="#">STAR CLASSES.</a>All rights
+             reserved</span>
+          <span class="policy_terms">
+             <a href="#">Privacy policy</a>
+             <a href="#">Terms & condition</a>
+          </span>
+       </div>
+    </div>
+ </footer>
+
+</body>
+<script src="app.js"></script>
+<script src="bootstrap-5.0.2-dist/assets/js/bootstrap.min.js"></script>
+
+</html>

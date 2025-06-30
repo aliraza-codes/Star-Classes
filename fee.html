@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="./style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Comaptible" content="IE=edge">
+  <link rel="shortcut icon" href="./img/ICONE.jfif" type="image/x-icon">
+  <title>STAR-CLASSES</title>
+  <meta name="desciption" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./bootstrap-5.0.2-dist/assets/css/bootstrap.min.css">
+  <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+</head>
+
+<style>
+  .container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+
+  .container header {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 500;
+    text-align: center;
+  }
+
+  .container .form {
+    margin-top: 30px;
+  }
+
+  .form .input-box {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .input-box label {
+    color: #333;
+  }
+
+  .form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: #707070;
+    margin-top: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 0 15px;
+  }
+
+  .input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .form .column {
+    display: flex;
+    column-gap: 15px;
+  }
+
+  .form .gender-box {
+    margin-top: 20px;
+  }
+
+  .gender-box h3 {
+    color: #333;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 8px;
+  }
+
+  .form :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+  }
+
+  .form .gender {
+    column-gap: 5px;
+  }
+
+  .gender input {
+    accent-color: rgb(130, 106, 251);
+  }
+
+  .form :where(.gender input, .gender label) {
+    cursor: pointer;
+  }
+
+  .gender label {
+    color: #707070;
+  }
+
+  .address :where(input, .select-box) {
+    margin-top: 15px;
+  }
+
+  .select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #707070;
+    font-size: 1rem;
+  }
+
+  .form button {
+    height: 55px;
+    width: 100%;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 30px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: rgb(130, 106, 251);
+  }
+
+  .form button:hover {
+    background: rgb(88, 56, 250);
+  }
+
+  /*Responsive*/
+  @media screen and (max-width: 500px) {
+    .form .column {
+      flex-wrap: wrap;
+    }
+
+    .form :where(.gender-option, .gender) {
+      row-gap: 15px;
+    }
+  }
+</style>
+
+<body style="background: -webkit-linear-gradient(right, #56d8e4,  #101c34, #56d8e4,  #101c34);">
+
+  <nav>
+    <div class="nav-bar">
+       <i class='bx bx-menu sidebarOpen'></i>
+       <span class="logo navLogo"><a href="index.html"><i class="fa-solid fa-star" style="color: #fc5406;"></i> S-CLASSES</a></span>
+       <div class="menu">
+          <div class="logo-toggle">
+             <span class="logo"><a href="#">S-CLASSES</a></span>
+             <i class='bx bx-x siderbarClose'></i>
+          </div>
+          <ul class="nav-links mb-0">
+             <li><a href="./index.html">Home</a></li>
+             <li><a href="./about.html">About</a></li>
+             <li><a href="./courses1.html">Courses</a></li>
+             <li><a href="./fee.html">Fee Structure</a></li>
+             <li><a href="./contactus.html">Contact US</a></li>
+          </ul>
+       </div>
+       <div class="darkLight-searchBox">
+          <div class="dark-light">
+             <!-- <i class='bx bx-moon moon'></i>
+             <i class='bx bx-sun sun'></i> -->
+          </div>
+          <div class="searchBox">
+             <div class="searchToggle">
+                <i class='bx bx-x cancel'></i>
+                <i class='bx bx-search search'></i>
+             </div>
+             <div class="search-field">
+                <input type="text" placeholder="Search...">
+                <i class='bx bx-search'></i>
+             </div>
+          </div>
+       </div>
+    </div>
+ </nav>
+  <!-- content -->
+
+  <div class="container-md">
+
+    <div class="container-fluid p-0">
+
+      <div class="row" style="position: relative;top:110px;text-align: center;">
+
+        <div class="col-md-12 ">
+
+          <img id="course-img-ap" class="img-fluid " src="./img/aptech c.jpg" alt="">
+
+        </div>
+
+
+      </div>
+
+      <div class="row justify-content-center">
+
+        <div class="col-lg-4" style="position: relative;top: 140px;">
+
+          <!-- first card and model strat -->
+
+          <button data-bs-toggle="modal" href="#exampleModalToggle1" role="button" type="button" class="btn btn-"
+            style="background-color: #fc5406;color: #f4f4f4;width:200px;">Registration Foam</button>
+
+          <div class="modal fade" id="exampleModalToggle1" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalToggleLabel2">Modal 2</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+
+                    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+
+                      <section class="container">
+                        <header>Registration Form</header>
+                        <form action="#" class="form">
+                          <div class="input-box">
+                            <label>Full Name</label>
+                            <input type="text" placeholder="Enter full name" required />
+                          </div>
+                          <div class="input-box">
+                            <label>Email Address</label>
+                            <input type="text" placeholder="Enter email address" required />
+                          </div>
+                          <div class="column">
+                            <div class="input-box">
+                              <label>Phone Number</label>
+                              <input type="number" placeholder="Enter phone number" required />
+                            </div>
+                            <div class="input-box">
+                              <label>Birth Date</label>
+                              <input type="date" placeholder="Enter birth date" required />
+                            </div>
+                          </div>
+                          <div class="gender-box">
+                            <h3>Gender</h3>
+                            <div class="gender-option">
+                              <div class="gender">
+                                <input type="radio" id="check-male" name="gender" checked />
+                                <label for="check-male">male</label>
+                              </div>
+                              <div class="gender">
+                                <input type="radio" id="check-female" name="gender" />
+                                <label for="check-female">Female</label>
+                              </div>
+                              <div class="gender">
+                                <input type="radio" id="check-other" name="gender" />
+                                <label for="check-other">prefer not to say</label>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="input-box address">
+                            <label>Address</label>
+                            <input type="text" placeholder="Enter street address" required />
+                            <input type="text" placeholder="Enter street address line 2" required />
+                            <div class="column">
+                              <div class="select-box">
+                                <select>
+                                  <option hidden>COURSES</option>
+                                  <option>ADSE</option>
+                                  <option>HDSE</option>
+                                  <option>Smart Professional</option>
+                                  <option>Short Courses</option>
+                                  <option>Languages</option>
+                                </select>
+                              </div>
+                              <input type="text" placeholder="Enter your city" required />
+                            </div>
+                            <div class="column mt-3">
+                              <select>
+                                <option hidden>Time Period</option>
+                                <option>1 MONTH</option>
+                                <option>3 MONTH</option>
+                                <option>6 MONTH</option>
+                                <option>1 YEAR</option>
+                                <option>3 YEAR</option>
+                              </select>
+                            </div>
+                          </div>
+                          <button onclick="window.print()">Submit</button>
+                        </form>
+                      </section>
+
+
+
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- first card and model end -->
+
+          <!-- second card and model strat -->
+
+          <button data-bs-toggle="modal" href="#exampleModalToggle2" role="button" type="button" class="btn btn-"
+            style="background-color: #fc5406;color: #f4f4f4;width:140px;">FEE Structure</button>
+
+          <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2"
+            tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalToggleLabel2">Fee structue</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+
+                    <div class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                        <img style="object-fit: cover;height: 100%;width: 100%;" src="./img/fee structue 2.jpeg" alt="">
+                      
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- second card and model end -->
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <footer class="mt-5" style="position: relative;top:150px;">
+    <div class="content ">
+      <div class="top">
+        <div class="logo-details">
+          <i class="fa-solid fa-star" style="color:#fc5406;"></i>
+          <span class="logo_name">STAR CLASSES</span>
+        </div>
+        <div class="media-icons">
+          <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="https://pk.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+        </div>
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">S-CLASSES</li>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./contactus.html">Contact us</a></li>
+          <li><a href="./about.html">About us</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">COURSE OFFER</li>
+          <li><a href="./about.html">ABOUT Star Classes</a></li>
+          <li><a href="./fee.html">Fee Structure</a></li>
+          <li><a href="./hdse.html">HDSE</a></li>
+          <li><a href="./accp.html">ADSE</a></li>
+          <li><a href="./short.html">Short Courses</a></li>
+          <li><a href="./smart.html">Smart Professionals</a></li>
+          <li><a href="./Languages.html">Language</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Account</li>
+          <li><a href="./login.html">Login</a></li>
+          <li><a href="./login.html">Signup</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Contact Us</li>
+          <li class="fas fa-home me-3" style="color:#f4f4f4;"> <a href="https://goo.gl/maps/LAF81cDo5UCWJ5HM8">
+              Aptech
+              D.H.A Center</a></li>
+          <li class="fas fa-envelope me-3" style="color:#f4f4f4;"><a href="mailto:"> Send Email</a></li>
+          <li class="fas fa-phone me-3" style="color:#f4f4f4;"><a
+              href="https://wa.me/+923212406190?text=please resolve my queery,i want to ask something."> Whatsapp
+              Me</a></li>
+        </ul>
+        <ul class="box input-box">
+          <li class="link_name">Subscribe</li>
+          <li><input style="background-color: #f4f4f4;color:  #101c34;" type="text" placeholder="Enter your email">
+          </li>
+          <li><input type="button" value="Subscribe"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2023 <a href="#">STAR CLASSES.</a>All rights
+          reserved</span>
+        <span class="policy_terms">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms & condition</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+
+</body>
+<script src="./bootstrap-5.0.2-dist/assets/js/bootstrap.min.js"></script>
+<script src="./app.js"></script>
+
+</html>

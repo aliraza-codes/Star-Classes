@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <link rel="shortcut icon" type="png" href="images/icon/favicon.png">
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Comaptible" content="IE=edge">
+   <title>STAR-CLASSES</title>
+   <link rel="shortcut icon" href="./img/ICONE.jfif" type="image/x-icon">
+   <meta name="desciption" content="">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="./bootstrap-5.0.2-dist/assets/css/bootstrap.min.css">
+   <link rel="stylesheet" type="text/css" href="style.css">
+   <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+   <style>
+      ::selection {
+         color: #fff;
+         background: #1cc7d0;
+      }
+
+      .container {
+         position: relative;
+         top: 140px;
+      }
+
+      .wrapper {
+         margin: 20px;
+         height: 390px;
+         width: 320px;
+         position: relative;
+         transform-style: preserve-3d;
+         perspective: 1000px;
+      }
+
+      .wrapper .card {
+         position: absolute;
+         height: 100%;
+         width: 100%;
+         padding: 5px;
+         background: #fff;
+         border-radius: 10px;
+         transform: translateY(0deg);
+         transform-style: preserve-3d;
+         backface-visibility: hidden;
+         box-shadow: 0px 10px 15px #101c34;
+         transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+      }
+
+      .wrapper:hover>.front-face {
+         transform: rotateY(-180deg);/
+      }
+
+      .wrapper .card img {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+         border-radius: 10px;
+      }
+
+      .wrapper .back-face {
+         display: flex;
+         align-items: center;
+         justify-content: space-evenly;
+         flex-direction: column;
+         transform: rotateY(180deg);
+      }
+
+      .wrapper:hover>.back-face {
+         transform: rotateY(0deg);
+      }
+
+      .wrapper .back-face img {
+         height: 150px;
+         width: 150px;
+         padding: 5px;
+         border-radius: 50%;
+         background: linear-gradient(375deg, #1cc7d0, #2ede98);
+      }
+
+      .wrapper .back-face .info {
+         text-align: center;
+      }
+
+      .back-face .info .title {
+         font-size: 30px;
+         font-weight: 500;
+      }
+
+      .back-face ul {
+         display: flex;
+      }
+
+      .back-face ul a {
+         display: block;
+         height: 40px;
+         width: 40px;
+         color: #fff;
+         text-align: center;
+         margin: 0 5px;
+         line-height: 38px;
+         border: 2px solid transparent;
+         border-radius: 50%;
+         background: linear-gradient(375deg, #1cc7d0, #2ede98);
+         transition: all 0.5s ease;
+      }
+
+      .back-face ul a:hover {
+         color: #1cc7d0;
+         border-color: #1cc7d0;
+         background: linear-gradient(375deg, transparent, transparent);
+      }
+   </style>
+</head>
+
+\
+
+<body>
+   <nav>
+      <div class="nav-bar">
+         <i class='bx bx-menu sidebarOpen'></i>
+         <span class="logo navLogo"><a href="index.html"><i class="fa-solid fa-star" style="color: #fc5406;"></i> S-CLASSES</a></span>
+         <div class="menu">
+            <div class="logo-toggle">
+               <span class="logo"><a href="#">S-CLASSES</a></span>
+               <i class='bx bx-x siderbarClose'></i>
+            </div>
+            <ul class="nav-links mb-0">
+               <li><a href="./index.html">Home</a></li>
+               <li><a href="./about.html">About</a></li>
+               <li><a href="./courses1.html">Courses</a></li>
+               <li><a href="./fee.html">Fee Structure</a></li>
+               <li><a href="./contactus.html">Contact US</a></li>
+            </ul>
+         </div>
+         <div class="darkLight-searchBox">
+            <div class="dark-light">
+               <!-- <i class='bx bx-moon moon'></i>
+               <i class='bx bx-sun sun'></i> -->
+            </div>
+            <div class="searchBox">
+               <div class="searchToggle">
+                  <i class='bx bx-x cancel'></i>
+                  <i class='bx bx-search search'></i>
+               </div>
+               <div class="search-field">
+                  <input type="text" placeholder="Search...">
+                  <i class='bx bx-search'></i>
+               </div>
+            </div>
+         </div>
+      </div>
+   </nav>
+
+   <!--content -->
+
+   <div id="img-1" class="col-xxl-12 col-xl-12 col-lg-12 col-md-12 col-sm-12">
+      <!-- slider -->
+     <h1 >STAR CLASSES</h1>
+     <h2>SKILLS FOR EMERGING WORLD</h2>
+   </div>
+
+   <h1 style="color: #dc5a1d;font-size: 60px;font-weight: bolder;" class="heading-1">Get started right away</h1>
+
+   <div class="container">
+
+      <div class="container-fluid p-0 d-flex justify-content-center">
+
+         <div class="row">
+            <div class="wrapper">
+               <div class="card front-face">
+                  <img
+                     src="./img/adse1.jfif">
+               </div>
+               <div class="card back-face">
+                  <img
+                     src="./img/adse1.jfif">
+                  <div class="info">
+                     <div class="title">
+                        ADSE
+                     </div>
+                     <p>
+                        ACCP PRIME is designed to produce developers of the future. Enabling students to develop
+                        applications from start to finish on many different platforms.
+                     </p>
+                  </div>
+                  <ul>
+                     <a href="./accp.html"><i class="fa-solid fa-arrow-right"></i></a>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="wrapper">
+               <div class="card front-face">
+                  <img
+                     src="./img/hdse.jpeg ">
+               </div>
+               <div class="card back-face">
+                  <img
+                     src="./img/hdse.jpeg">
+                  <div class="info">
+                     <div class="title">
+                        HDSE
+                     </div>
+                     <p>
+                        Star Classes HDSE program helps students learn full stack development in multiple fields including Web Designing, Application development & Mobile App development.
+
+
+                     </p>
+                  </div>
+                  <ul>
+                     <a href="./hdse.html"><i class="fa-solid fa-arrow-right"></i></a>
+                  </ul>
+               </div>
+            </div>
+
+
+            <div class="wrapper">
+               <div class="card front-face">
+                  <img
+                     src="./img/smart2.jfif">
+               </div>
+               <div class="card back-face">
+                  <img
+                     src="./img/smart2.jfif">
+                  <div class="info">
+                     <div class="title">
+                        Smart Professionals
+                     </div>
+                     <p>
+                        Smart Professional course is a comprehensive program designed to equip individuals with the essential  to excel in today's competitive professional landscape.
+                     </p>
+                  </div>
+                  <ul>
+                     <a href="./smart.html"><i class="fa-solid fa-arrow-right"></i></a>
+                  </ul>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+   </div>
+
+   <div class="container">
+
+      <div class="container-fluid p-0 d-flex justify-content-center mt-4">
+
+         <div class="row">
+
+            <div class="wrapper">
+               <div class="card front-face">
+                  <img
+                     src="./img/short1.jfif">
+               </div>
+               <div class="card back-face">
+                  <img
+                     src="./img/short1.jfif">
+                  <div class="info">
+                     <div class="title">
+                        SHORT COURSES
+                     </div>
+                     <p>
+                        Discover the power of effective communication in our dynamic short course. Enhance your verbal and written  practical examples, and personalized feedback.
+                     </p>
+                  </div>
+                  <ul>
+                     <a href="short.html"><i class="fa-solid fa-arrow-right"></i></a>
+                  </ul>
+               </div>
+            </div>
+
+            <div class="wrapper">
+               <div class="card front-face">
+                  <img
+                     src="./img/card5.png">
+               </div>
+               <div class="card back-face">
+                  <img
+                     src="./img/card5.png">
+                  <div class="info">
+                     <div class="title">
+                        Languages
+                     </div>
+                     <p>
+                        Discover the art of effective communication with our dynamic English language course. this immersive program equips you with essential language skills.
+                     </p>
+                  </div>
+                  <ul>
+                     <a href="./Languages.html"><i class="fa-solid fa-arrow-right"></i></a>
+                  </ul>
+               </div>
+            </div>
+
+         </div>
+      </div>
+
+   </div>
+   <div class="diffSection" id="portfolio_section">
+      <center>
+         <p style="color: #dc5a1d ;font-weight: bolder; font-size:60px;">Portfolio</p>
+      </center>
+      <div class="content">
+         <p style="color: #dc5a1d;">
+            “Education is the passport to the future, for tomorrow belongs to those who prepare for it today.” “Your
+            attitude, not your aptitude, will determine your altitude.” “If you think education is expensive, try
+            ignorance.” “The only person who is educated is thxe one who has learned how to learn …and change.”
+         </p>
+      </div>
+   </div>
+   <div class="extra">
+      <p>We're increasing this data every year</p>
+      <div class="smbox">
+         <span>
+            <center>
+               <div class="data">1781</div>
+               <div class="det">Enrolled Students</div>
+            </center>
+         </span>
+         <span>
+            <center>
+               <div class="data">62</div>
+               <div class="det">Total Courses</div>
+            </center>
+         </span>
+         <span>
+            <center>
+               <div class="data">26</div>
+               <div class="det">Countries</div>
+            </center>
+         </span>
+         <span>
+            <center>
+               <div class="data">1200</div>
+               <div class="det">Centers</div>
+            </center>
+         </span>
+      </div>
+   </div>
+   <div id="pakistan" class="conatiner">
+      <h2 class="subheading"><span> <span class="green">36</span> centers across</span> <img class="pakistan-icon"
+            src="./img/video_files/pakistan-icon.png" alt=""> <span>Pakistan</span></h2>
+   </div>
+
+   <footer class="mt-5" style="position: relative;top:100px;">
+      <div class="content ">
+         <div class="top">
+            <div class="logo-details">
+               <i class="fa-solid fa-star" style="color: #fc5406;"></i>
+               <span class="logo_name">STAR CLASSES</span>
+            </div>
+            <div class="media-icons">
+               <a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a>
+               <a href="https://twitter.com/?lang=en"><i class="fab fa-twitter"></i></a>
+               <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+               <a href="https://pk.linkedin.com/"><i class="fab fa-linkedin-in"></i></a>
+               <a href="https://www.youtube.com/"><i class="fab fa-youtube"></i></a>
+            </div>
+         </div>
+         <div class="link-boxes">
+            <ul class="box">
+               <li class="link_name">S-CLASSES</li>
+               <li><a href="./index.html">Home</a></li>
+               <li><a href="./contactus.html">Contact us</a></li>
+               <li><a href="./about.html">About us</a></li>
+            </ul>
+            <ul class="box">
+               <li class="link_name">COURSE OFFER</li>
+               <li><a href="./about.html">ABOUT Star Classes</a></li>
+               <li><a href="./fee.html">Fee Structure</a></li>
+               <li><a href="./hdse.html">HDSE</a></li>
+               <li><a href="./accp.html">ADSE</a></li>
+               <li><a href="./short.html">Short Courses</a></li>
+               <li><a href="./smart.html">Smart Professionals</a></li>
+               <li><a href="./Languages.html">Language</a></li>
+            </ul>
+            <ul class="box">
+               <li class="link_name">Account</li>
+               <li><a href="./login.html">Login</a></li>
+               <li><a href="./login.html">Signup</a></li>
+            </ul>
+            <ul class="box">
+               <li class="link_name">Contact Us</li>
+               <li class="fas fa-home me-3" style="color:#f4f4f4;"> <a href="https://goo.gl/maps/LAF81cDo5UCWJ5HM8">
+                     Aptech
+                     D.H.A Center</a></li>
+               <li class="fas fa-envelope me-3" style="color:#f4f4f4;"><a href="mailto:"> Send Email</a></li>
+               <li class="fas fa-phone me-3" style="color:#f4f4f4;"><a
+                     href="https://wa.me/+923212406190?text=please resolve my queery,i want to ask something."> Whatsapp
+                     Me</a></li>
+            </ul>
+            <ul class="box input-box">
+               <li class="link_name">Subscribe</li>
+               <li><input style="background-color: #f4f4f4;color:  #101c34;" type="text" placeholder="Enter your email">
+               </li>
+               <li><input type="button" value="Subscribe"></li>
+            </ul>
+         </div>
+      </div>
+      <div class="bottom-details">
+         <div class="bottom_text">
+            <span class="copyright_text">Copyright © 2023 <a href="#">STAR CLASSES.</a>All rights
+               reserved</span>
+            <span class="policy_terms">
+               <a href="#">Privacy policy</a>
+               <a href="#">Terms & condition</a>
+            </span>
+         </div>
+      </div>
+   </footer>
+</body>
+<script src="./bootstrap-5.0.2-dist/assets/js/bootstrap.min.js"></script>\
+<script src="./app.js"></script>
+</html>
